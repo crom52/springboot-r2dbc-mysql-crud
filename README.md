@@ -35,8 +35,9 @@ By leveraging the non-blocking nature of R2DBC, this application is optimized fo
 
 
 ## How to run app:
-1. Open the terminal.
-2. Run the following command:
+1. Clone the repository.
+2. Open the terminal and navigate to the project directory.
+2. Run the docker-compose with following command:
 
    ```bash
    docker-compose up
