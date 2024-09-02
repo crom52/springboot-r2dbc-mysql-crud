@@ -33,14 +33,29 @@ By leveraging the non-blocking nature of R2DBC, this application is optimized fo
 - **Java 17**: Built with the latest LTS version of Java.
 - **Spring Boot 3.0.1**: Leverages the power and simplicity of Spring Boot for application development.
 
+## Setting up
+1. Install docker https://docs.docker.com/engine/install/
+2. Open the docker engine or docker desktop
 
 ## How to run app:
 1. Clone the repository.
 2. Open the terminal and navigate to the project directory.
-2. Run the docker-compose with following command:
+3. Run the docker-compose with following command:
 
    ```bash
    docker-compose up
+   ```
+   or
+   ```bash
+   docker compose up
+   ```
+4. The application will be accessible at `http://localhost:9898`.
+   - Run CURL (endpoints) below in the terminal/shell to test the application.
+
+5. Stop the docker container and remove volume
+   ```bash
+   docker-compose down -v
+   ```   
 
 ## Endpoints:
 ### 1. Find all
