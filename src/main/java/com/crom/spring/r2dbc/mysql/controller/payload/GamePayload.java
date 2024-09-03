@@ -1,4 +1,4 @@
-package com.bezkoder.spring.r2dbc.mysql.controller.payload;
+package com.crom.spring.r2dbc.mysql.controller.payload;
 
 import lombok.Builder;
 import lombok.Getter;

@@ -1,9 +1,24 @@
 spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/r2dbc
+    username: username
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
   r2dbc:
     url: r2dbc:mysql://localhost:3306/r2dbc
     username: username
     password: password
   data:
+    jpa:
+      hibernate:
+        ddl-auto: update
+        properties:
+          hibernate:
+            dialect: org.hibernate.dialect.MySQLDialect
+      repositories:
+        enabled: true
     r2dbc:
       repositories:
         enabled: true
