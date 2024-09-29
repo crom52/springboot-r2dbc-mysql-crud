@@ -21,7 +21,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/api/games")
+@RequestMapping("/api/r2/games")
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class R2GameController {
@@ -48,7 +48,7 @@ public class R2GameController {
 
    @PostMapping("")
    @ResponseStatus(HttpStatus.CREATED)
-   public Mono<Game> createTutorial(@RequestBody GamePayload gamePayload) {
+   public Mono<Game> createGame(@RequestBody GamePayload gamePayload) {
 
       Game game = Game.builder()
          .title(gamePayload.getTitle())
@@ -61,7 +61,7 @@ public class R2GameController {
 
    @PutMapping("/{id}")
    @ResponseStatus(HttpStatus.OK)
-   public Mono<Game> updateTutorial(@PathVariable("id") long id, @RequestBody GamePayload gamePayload) {
+   public Mono<Game> updateGame(@PathVariable("id") long id, @RequestBody GamePayload gamePayload) {
 
       return r2GameService.update(id, gamePayload);
    }

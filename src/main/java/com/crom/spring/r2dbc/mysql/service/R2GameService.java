@@ -43,6 +43,7 @@ public class R2GameService {
       return r2GameRepository.saveAll(game);
    }
 
+   //   @Transactional("reactiveTransactionManager")
    public Mono<Game> update(long id, GamePayload gamePayload) {
 
       return r2GameRepository.findById(id)
